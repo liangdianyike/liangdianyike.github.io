@@ -19,7 +19,8 @@
         <!-- Banner -->
           <section id="banner">
             <div class="inner">
-              <h2>{{ site.title }}</h2>
+              <!--<h2>{{ site.title }}</h2>-->
+              <img src="{{ site.baseurl }}/images/logo.png" width="380px" />
               <p>{{ site.description }}</p>
               <!--
               <ul class="actions">
@@ -83,8 +84,8 @@
             endfor %}
           </section>
 
-        <!-- Three -->{%
-      if site.tags.featured %}
+        <!-- Three -->
+        {% if site.tags.featured %}
           <section id="landing_features" class="wrapper style3 special">
             <div class="inner">
               <header class="major">
@@ -110,19 +111,18 @@
                 endfor %}
               </ul>
             </div>
-          </section>{%
-      endif %}
+          </section>
+          {% endif %}
 
         <!-- CTA -->
           <section id="cta" class="wrapper style4">
             <div class="inner">
               <header>
-                <h2>{{ site.closing-head }}</h2>
+                <h2>Hello</h2>
                 <p>{{ site.closing-para }}</p>
               </header>
               <ul class="actions vertical">
-                <!-- <li><a href="#" class="button fit special">Activate</a></li> -->
-                <li><a href="{{ '/contact/' | prepend: site.baseurl }}" class="button fit special">Contact</a></li>
+                <li><a href="{{ site.social.email }}" class="button fit special">Contact</a></li>
               </ul>
             </div>
           </section>
